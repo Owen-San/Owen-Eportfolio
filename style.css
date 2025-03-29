@@ -515,10 +515,11 @@ nav {
     width: 500px;
 }
 
-.container__contact {
+.container__contact,
+.contact__form {
     padding-bottom: 24px;
     border-radius: 10px;
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -527,6 +528,7 @@ nav {
 
 textarea {
     width: 100%;
+    max-width: 600px;
     height: 350px !important;
     font-size: 18px;
     padding: 12px;
@@ -593,7 +595,9 @@ input::placeholder {
         font-size: 28px;
     }
 
-    .about-me__info--para {
+    .about-me__info--para,
+    .contact-me__info--para,
+    .contact__form {
         font-size: 18px;
     }
 
@@ -608,6 +612,10 @@ input::placeholder {
     .project__description {
         left: 30px;
         padding-right: 30px;
+    }
+
+    textarea {
+        max-width: 300px;
     }
 }
 
@@ -689,41 +697,5 @@ input::placeholder {
         padding: 24px;
     }
 
-    @media (max-width: 768px) {
-        .section__title--contact {
-            font-size: 32px;
-        }
     
-        .container__contact {
-            padding: 20px;
-        }
-    
-        .email__box, .textarea__message {
-            max-width: 100%;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .section__title--contact {
-            font-size: 28px;
-        }
-    
-        .contact-me__info--para {
-            font-size: 16px;
-        }
-    
-        .contact-me__link {
-            font-size: 36px;
-        }
-    
-        .email__box, .textarea__message {
-            width: 100%;
-            max-width: 100%;
-        }
-    
-        button {
-            font-size: 16px;
-            padding: 8px 16px;
-        }
-    }
 }
