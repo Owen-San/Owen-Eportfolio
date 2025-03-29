@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/626ee27be3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Contact Me</title>
+  </head>
+  <body>
+    <nav>
+      <div class="personal__logo">Owen Sanchez</div>
+      <ul class="nav__link--list">
+        <li class="nav__link">
+          <a
+            href="/index.html"
+            class="nav__link--anchor nav__link--anchor--primary"
+            >Back To Home</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <hr class="nav__hr" />
+    <section id="contact">
+      <div class="container__contact">
+        <h1 class="section__title--contact">
+          Get in <span class="text--purple">&nbsp;Touch</span>
+        </h1>
+        <p class="contact-me__info--para">
+          Have a project in mind or just want to connect? Feel free to reach
+          out! Whether it's about collaboration, opportunities, or just talking
+          tech, I'd love to hear from you. Drop me a message, and I'll get back
+          to you as soon as possible!
+        </p>
+        <div class="contact-me__links">
+            <p class ="contact-me__info--para">If form does not work click the email icon instead!</p>
+            <a href="mailto:ptvowen@gmail.com" class="contact-me__link">
+                <i class="fa-solid fa-square-envelope"></i>
+            </a>
+        </div>
+        <form
+          action="https://formspree.io/f/xjkyeran"
+          method="POST"
+          class="contact__form"
+        >
+          <label for="email" class="email__label">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="email__box"
+            required
+            placeholder="example@gmail.com"
+          />
+
+          <label for="message" class="textarea__label">Message:</label>
+          <textarea
+            id="message"
+            class="textarea__message"
+            name="message"
+            rows="5"
+            maxlength="300"
+            required
+            placeholder="Write your message here... (Max 300 Characters)"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="nav__link--anchor nav__link--anchor--primary"
+          >
+            Send Message
+          </button>
+        </form>
+        <p id="success-message" style="display: none; color: #8a5cf5">
+          Message sent successfully!
+        </p>
+      </div>
+    </section>
+    <section>
+      <footer>
+        <div class="row footer__row">
+          <a href="#" class="footer__anchor">
+            <figure class="footer__logo">
+              <img
+                src="./assets/logo.png"
+                class="footer__logo--img"
+                alt="Logo Image"
+              />
+            </figure>
+            <span class="footer__logo--popper">
+              Top
+              <i class="fa-solid fa-arrow-up"></i>
+            </span>
+          </a>
+          <div class="footer__social--list">
+            <a
+              href="https://github.com/Owen-San"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              target="_blank"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/owen-sanchez-0b9964358/"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a
+              href="mailto:ptvowen@gmail.com"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              target="_blank"
+              >Email</a
+            >
+            <a
+              href="./assets/Owen's Resume.pdf"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              target="_blank"
+              >Resume</a
+            >
+          </div>
+          <div class="footer__copyright">Copyright © 2025 Owen Sanchez</div>
+        </div>
+      </footer>
+    </section>
+
+    <script>
+      document
+        .querySelector(".contact__form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          fetch(this.action, {
+            method: this.method,
+            body: new FormData(this),
+            headers: { Accept: "application/json" },
+          })
+            .then((response) => {
+              if (response.ok) {
+                document.getElementById("success-message").style.display =
+                  "block";
+                this.reset();
+              } else {
+                alert("Something went wrong. Please try again.");
+              }
+            })
+            .catch((error) => alert("There was an error!"));
+        });
+    </script>
+  </body>
+</html>

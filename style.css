@@ -68,7 +68,6 @@ li {
 
 button {
     cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(255, 183, 3, 0.3);
 }
 
 .flex {
@@ -496,6 +495,93 @@ nav {
     opacity: 1;
 }
 
+/* CONTACT */
+
+.section__title--contact {
+    display: flex;
+    animation: fade-up 650ms 400ms backwards;
+}
+
+.contact__form {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.textarea__message {
+    width: 500px;
+}
+
+.container__contact {
+    padding-bottom: 24px;
+    border-radius: 10px;
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea {
+    width: 100%;
+    height: 350px !important;
+    font-size: 18px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #8A5CF5;
+    border-radius: 5px;
+    resize: none;
+}
+
+.email__label {
+    padding-top: 12px;
+    color: #C0C0C0;
+}
+
+.email__box {
+    height: 32px;
+    width: 256px;
+    font-size: 16px;
+}
+
+.textarea__label {
+    color: #C0C0C0;
+}
+
+.contact-me__info--para {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 28px;
+    margin-top: 28px;
+    animation: fade-up 650ms 400ms backwards;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+.contact-me__link {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    font-size: 64px;
+    color: #C0C0C0;
+}
+
+.contact-me__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    animation: fade-in 1200ms 800ms backwards;
+}
+
 /* RESPONSIVENESS */
 
 @media (max-width: 768px) {
@@ -597,5 +683,9 @@ nav {
 
     .about-me__info--para {
         margin-top: 64px;
+    }
+
+    .footer__social--list {
+        padding: 24px;
     }
 }
