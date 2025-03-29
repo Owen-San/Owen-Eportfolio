@@ -688,4 +688,42 @@ input::placeholder {
     .footer__social--list {
         padding: 24px;
     }
+
+    @media (max-width: 768px) {
+        .section__title--contact {
+            font-size: 32px;
+        }
+    
+        .container__contact {
+            padding: 20px;
+        }
+    
+        .email__box, .textarea__message {
+            max-width: 100%;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .section__title--contact {
+            font-size: 28px;
+        }
+    
+        .contact-me__info--para {
+            font-size: 16px;
+        }
+    
+        .contact-me__link {
+            font-size: 36px;
+        }
+    
+        .email__box, .textarea__message {
+            width: 100%;
+            max-width: 100%;
+        }
+    
+        button {
+            font-size: 16px;
+            padding: 8px 16px;
+        }
+    }
 }
